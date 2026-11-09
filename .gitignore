@@ -1,3 +1,5 @@
 a.out
+*.out
 build/
 *.o
+text.txt
