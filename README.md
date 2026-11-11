@@ -1,13 +1,24 @@
 # life
 
-C++ 对象生命周期实验：构造、析构、拷贝与作用域。
+C++ 学习项目：对象模型、RAII、智能指针与工程化实践。
 
-## 文件
+## 目录结构
 
-- order.cpp — 构造/析构顺序，以及成员对象的生灭
-- copy.cpp — 按值传递与按引用传递的代价对比
-- guess.cpp — 输出顺序预测练习
+- `include/` — 公共头文件
+- `src/` — 实现
+- `tests/` — 单元测试
+- `*.cpp`（根目录） — 早期单文件实验
 
-## 编译运行
+## 构建
 
-g++ -std=c++17 -Wall order.cpp -o a.out && ./a.out
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build -j
+
+## 测试
+
+cd build && ctest --output-on-failure
+
+## 内容
+
+- `mystring` — 手写字符串类，演示三/五法则
+- 早期实验：对象生命周期、移动语义、虚函数与虚表、RAII、智能指针
